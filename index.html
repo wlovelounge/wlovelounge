@@ -1,21 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>WLOVE LOUNGE</title>
-
-<style>
-
+<title>WLOVE LOUNGE</title><style>
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
@@ -23,13 +14,6 @@ body {
     background: #000;
     color: #fff;
 }
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-/* HEADER */
 
 header {
     text-align: center;
@@ -64,8 +48,6 @@ nav a:hover {
     color: #f7a8c4;
 }
 
-/* HERO */
-
 .hero {
     background: #f7a8c4;
     color: #000;
@@ -97,7 +79,7 @@ nav a:hover {
     opacity: .85;
 }
 
-/* PRODUCTS */
+/* SHOP */
 
 .products {
     max-width: 1100px;
@@ -177,16 +159,12 @@ nav a:hover {
     font-weight: bold;
 }
 
-.shop-button:hover {
-    opacity: .85;
-}
-
 /* NEW COLLECTION */
 
-.new-section {
+.new-collection {
     max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px 20px 70px;
+    margin: auto;
+    padding: 10px 20px 70px;
 }
 
 .new-heading {
@@ -203,7 +181,6 @@ nav a:hover {
 }
 
 .new-heading h2 {
-    color: #fff;
     font-size: 32px;
     margin-bottom: 10px;
 }
@@ -215,7 +192,7 @@ nav a:hover {
 
 .new-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 25px;
 }
 
@@ -232,14 +209,14 @@ nav a:hover {
     border-color: #f7a8c4;
 }
 
-.new-image {
+.new-img {
     width: 100%;
     height: 360px;
     overflow: hidden;
     background: #f7a8c4;
 }
 
-.new-image img {
+.new-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -247,39 +224,27 @@ nav a:hover {
 }
 
 .new-body {
-    padding: 20px;
+    padding: 22px;
 }
 
 .new-body h3 {
-    font-size: 20px;
+    font-size: 21px;
     margin-bottom: 8px;
 }
 
 .new-body p {
     color: #bbb;
-    font-size: 14px;
     line-height: 1.5;
+    font-size: 14px;
     margin-bottom: 15px;
 }
 
-.new-price {
+.coming-soon {
+    display: inline-block;
     color: #f7a8c4;
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.new-button {
-    display: inline-block;
-    background: #f7a8c4;
-    color: #000;
-    padding: 11px 18px;
-    border-radius: 25px;
-    font-weight: bold;
-}
-
-.new-button:hover {
-    opacity: .85;
+    letter-spacing: 1px;
 }
 
 /* ABOUT */
@@ -314,7 +279,6 @@ footer {
 /* MOBILE */
 
 @media (max-width: 600px) {
-
     .logo {
         font-size: 31px;
     }
@@ -327,12 +291,10 @@ footer {
         font-size: 34px;
     }
 
-    .products {
-        padding: 50px 15px;
-    }
-
-    .new-section {
-        padding: 10px 15px 60px;
+    .products,
+    .new-collection {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     .products h2,
@@ -341,7 +303,7 @@ footer {
     }
 
     .product-img,
-    .new-image {
+    .new-img {
         height: 400px;
     }
 
@@ -349,384 +311,219 @@ footer {
         margin: 0 7px;
     }
 }
-
-</style>
-</head>
-
-
-<body>
-
-
-<!-- HEADER -->
-
-<header>
-
-    <div class="logo">
-        WLOVE LOUNGE ♡
-    </div>
-
-    <div class="tagline">
-        COMFORT LOOKS GOOD ON YOU.
-    </div>
-
-    <nav>
-        <a href="#shop">SHOP</a>
-        <a href="#new">NEW COLLECTION</a>
-        <a href="#about">ABOUT</a>
-    </nav>
-
-</header>
-
-
-<!-- HERO -->
-
-<section class="hero">
-
-    <h1>
-        COMFORT LOOKS GOOD ON YOU.
-    </h1>
-
-    <p>
-        Soft looks. Cozy energy. WLOVE LOUNGE.
-    </p>
-
-    <a href="#shop" class="button">
-        SHOP THE COLLECTION
-    </a>
-
-</section>
-
-
-<!-- ORIGINAL SHOP -->
-
-<section class="products" id="shop">
-
-    <h2>
-        SHOP WLOVE
-    </h2>
-
-
-    <div class="grid">
-
-
-        <!-- ORIGINAL PRODUCT 1 -->
-
-        <article class="card">
-
-            <div class="product-img">
-
-                <img
-                    src="Screenshot_20260917_233615_Gallery.jpg"
-                    alt="WLOVE Lounge Set"
-                >
-
-            </div>
-
-            <div class="card-body">
-
-                <h3>
-                    Wlove Lounge Set
-                </h3>
-
-                <p>
-                    Our signature black two-piece hoodie and sweatpants set.
-                </p>
-
-                <div class="price">
-                    $50.00
-                </div>
-
-                <a href="#" class="shop-button">
-                    SHOP NOW
-                </a>
-
-            </div>
-
-        </article>
-
-
-        <!-- ORIGINAL PRODUCT 2 -->
-
-        <article class="card">
-
-            <div class="product-img">
-
-                <img
-                    src="Screenshot_20260917_233608_Gallery.jpg"
-                    alt="WLOVE Signature Tee"
-                >
-
-            </div>
-
-            <div class="card-body">
-
-                <h3>
-                    Wlove Essential Tee
-                </h3>
-
-                <p>
-                    A simple WLOVE essential made for everyday looks.
-                </p>
-
-                <div class="price">
-                    $28.00
-                </div>
-
-                <a href="#" class="shop-button">
-                    SHOP NOW
-                </a>
-
-            </div>
-
-        </article>
-
-
-        <!-- ORIGINAL PRODUCT 3 -->
-
-        <article class="card">
-
-            <div class="product-img">
-
-                <img
-                    src="Screenshot_20260917_233612_Gallery.jpg"
-                    alt="WLOVE Hoodie"
-                >
-
-            </div>
-
-            <div class="card-body">
-
-                <h3>
-                    Wlove Hoodie
-                </h3>
-
-                <p>
-                    Cozy black WLOVE zip hoodie for everyday comfort.
-                </p>
-
-                <div class="price">
-                    $40.00
-                </div>
-
-                <a href="#" class="shop-button">
-                    SHOP NOW
-                </a>
-
-            </div>
-
-        </article>
-
-
-    </div>
-
-</section>
-
-
-<!-- NEW COLLECTION -->
-
-<section class="new-section" id="new">
-
-
-    <div class="new-heading">
-
-        <div class="new-label">
-            JUST DROPPED
+</style></head><body><header>
+    <div class="logo">WLOVE LOUNGE ♡</div><div class="tagline">
+    COMFORT LOOKS GOOD ON YOU.
+</div>
+
+<nav>
+    <a href="#shop">SHOP</a>
+    <a href="#new">NEW COLLECTION</a>
+    <a href="#about">ABOUT</a>
+</nav>
+
+</header><section class="hero">
+    <h1>COMFORT LOOKS GOOD ON YOU.</h1><p>
+    Soft looks. Cozy energy. WLOVE LOUNGE.
+</p>
+
+<a href="#shop" class="button">
+    SHOP THE COLLECTION
+</a>
+
+</section><!-- YOUR ORIGINAL PRODUCTS --><section class="products" id="shop"><h2>SHOP WLOVE</h2>
+
+<div class="grid">
+
+    <article class="card">
+        <div class="product-img">
+            <img
+                src="Screenshot_20260917_233615_Gallery.jpg"
+                alt="WLOVE Lounge Set"
+            >
         </div>
 
-        <h2>
-            NEW COLLECTION
-        </h2>
+        <div class="card-body">
+            <h3>Wlove Lounge Set</h3>
 
-        <p>
-            New pieces made for the WLOVE girl.
-        </p>
+            <p>
+                Our signature black two-piece hoodie and sweatpants set.
+            </p>
 
+            <div class="price">$50.00</div>
+
+            <a href="#" class="shop-button">
+                SHOP NOW
+            </a>
+        </div>
+    </article>
+
+
+    <article class="card">
+        <div class="product-img">
+            <img
+                src="Screenshot_20260917_233608_Gallery.jpg"
+                alt="WLOVE Signature Tee"
+            >
+        </div>
+
+        <div class="card-body">
+            <h3>Wlove Essential Tee</h3>
+
+            <p>
+                A simple WLOVE essential made for everyday looks.
+            </p>
+
+            <div class="price">$28.00</div>
+
+            <a href="#" class="shop-button">
+                SHOP NOW
+            </a>
+        </div>
+    </article>
+
+
+    <article class="card">
+        <div class="product-img">
+            <img
+                src="Screenshot_20260917_233612_Gallery.jpg"
+                alt="WLOVE Hoodie"
+            >
+        </div>
+
+        <div class="card-body">
+            <h3>Wlove Hoodie</h3>
+
+            <p>
+                Cozy black WLOVE zip hoodie for everyday comfort.
+            </p>
+
+            <div class="price">$40.00</div>
+
+            <a href="#" class="shop-button">
+                SHOP NOW
+            </a>
+        </div>
+    </article>
+
+</div>
+
+</section><!-- NEW PRODUCTS --><section class="new-collection" id="new"><div class="new-heading">
+
+    <div class="new-label">
+        NEW DROP
     </div>
 
-
-    <div class="new-grid">
-
-
-        <!-- NEW PRODUCT 1 -->
-
-        <article class="new-card">
-
-            <div class="new-image">
-
-                <img
-                    src="Screenshot_20260917_233612_Gallery.jpg"
-                    alt="WLOVE New Collection"
-                >
-
-            </div>
-
-            <div class="new-body">
-
-                <h3>
-                    Wlove New Set
-                </h3>
-
-                <p>
-                    A new WLOVE piece from our upcoming collection.
-                </p>
-
-                <div class="new-price">
-                    COMING SOON
-                </div>
-
-                <a href="#" class="new-button">
-                    SHOP NOW
-                </a>
-
-            </div>
-
-        </article>
-
-
-        <!-- NEW PRODUCT 2 -->
-
-        <article class="new-card">
-
-            <div class="new-image">
-
-                <img
-                    src="Screenshot_20260918_031846_Gallery.jpg"
-                    alt="WLOVE New Collection"
-                >
-
-            </div>
-
-            <div class="new-body">
-
-                <h3>
-                    Wlove New Arrival
-                </h3>
-
-                <p>
-                    A fresh new piece from WLOVE LOUNGE.
-                </p>
-
-                <div class="new-price">
-                    COMING SOON
-                </div>
-
-                <a href="#" class="new-button">
-                    SHOP NOW
-                </a>
-
-            </div>
-
-        </article>
-
-
-        <!-- NEW PRODUCT 3 -->
-
-        <article class="new-card">
-
-            <div class="new-image">
-
-                <img
-                    src="Screenshot_20260918_031851_Gallery.jpg"
-                    alt="WLOVE New Collection"
-                >
-
-            </div>
-
-            <div class="new-body">
-
-                <h3>
-                    Wlove New Arrival
-                </h3>
-
-                <p>
-                    A fresh new piece from WLOVE LOUNGE.
-                </p>
-
-                <div class="new-price">
-                    COMING SOON
-                </div>
-
-                <a href="#" class="new-button">
-                    SHOP NOW
-                </a>
-
-            </div>
-
-        </article>
-
-
-        <!-- NEW PRODUCT 4 -->
-
-        <article class="new-card">
-
-            <div class="new-image">
-
-                <img
-                    src="Screenshot_20260918_031856_Gallery.jpg"
-                    alt="WLOVE New Collection"
-                >
-
-            </div>
-
-            <div class="new-body">
-
-                <h3>
-                    Wlove New Arrival
-                </h3>
-
-                <p>
-                    A fresh new piece from WLOVE LOUNGE.
-                </p>
-
-                <div class="new-price">
-                    COMING SOON
-                </div>
-
-                <a href="#" class="new-button">
-                    SHOP NOW
-                </a>
-
-            </div>
-
-        </article>
-
-
-    </div>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section class="about" id="about">
-
-    <h2>
-        ABOUT WLOVE ♡
-    </h2>
+    <h2>NEW COLLECTION</h2>
 
     <p>
-        WLOVE LOUNGE is made for comfort, confidence and effortless style.
-        From cozy lounge sets to everyday essentials, we believe comfort
-        should always look good.
+        New WLOVE pieces coming soon.
     </p>
 
-</section>
+</div>
 
 
-<!-- FOOTER -->
-
-<footer>
-
-    © 2026 WLOVE LOUNGE ♡
-
-    <br><br>
-
-    COMFORT LOOKS GOOD ON YOU.
-
-</footer>
+<div class="new-grid">
 
 
-</body>
+    <!-- NEW ITEM 1 -->
+
+    <article class="new-card">
+
+        <div class="new-img">
+            <img
+                src="Screenshot_20260918_031846_Gallery.jpg"
+                alt="WLOVE New Collection"
+            >
+        </div>
+
+        <div class="new-body">
+
+            <h3>Wlove New Collection</h3>
+
+            <p>
+                A new WLOVE LOUNGE piece coming soon.
+            </p>
+
+            <div class="coming-soon">
+                COMING SOON
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- NEW ITEM 2 -->
+
+    <article class="new-card">
+
+        <div class="new-img">
+            <img
+                src="Screenshot_20260918_031851_Gallery.jpg"
+                alt="WLOVE New Collection"
+            >
+        </div>
+
+        <div class="new-body">
+
+            <h3>Wlove New Collection</h3>
+
+            <p>
+                A new WLOVE LOUNGE piece coming soon.
+            </p>
+
+            <div class="coming-soon">
+                COMING SOON
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- NEW ITEM 3 -->
+
+    <article class="new-card">
+
+        <div class="new-img">
+            <img
+                src="Screenshot_20260918_031856_Gallery.jpg"
+                alt="WLOVE New Collection"
+            >
+        </div>
+
+        <div class="new-body">
+
+            <h3>Wlove New Collection</h3>
+
+            <p>
+                A new WLOVE LOUNGE piece coming soon.
+            </p>
+
+            <div class="coming-soon">
+                COMING SOON
+            </div>
+
+        </div>
+
+    </article>
+
+</div>
+
+</section><!-- ABOUT --><section class="about" id="about"><h2>ABOUT WLOVE ♡</h2>
+
+<p>
+    WLOVE LOUNGE is made for comfort, confidence and effortless style.
+    From cozy lounge sets to everyday essentials, we believe comfort
+    should always look good.
+</p>
+
+</section><!-- FOOTER --><footer>© 2026 WLOVE LOUNGE ♡
+
+<br><br>
+
+COMFORT LOOKS GOOD ON YOU.
+
+</footer></body>
 </html>
-
- 
