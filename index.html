@@ -1,529 +1,566 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WLOVE LOUNGE</title><style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-body {
-    font-family: Arial, sans-serif;
-    background: #000;
-    color: #fff;
-}
+  <title>WLOVE LOUNGE</title>
 
-header {
-    text-align: center;
-    padding: 35px 20px;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.logo {
-    color: #f7a8c4;
-    font-size: 40px;
-    font-weight: 900;
-    letter-spacing: 3px;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-.tagline {
-    margin-top: 8px;
-    font-size: 13px;
-    letter-spacing: 2px;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fff;
+      color: #111;
+    }
 
-nav {
-    margin-top: 22px;
-}
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid #eee;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 12px;
-    font-size: 14px;
-}
-
-nav a:hover {
-    color: #f7a8c4;
-}
-
-.hero {
-    background: #f7a8c4;
-    color: #000;
-    text-align: center;
-    padding: 75px 20px;
-}
-
-.hero h1 {
-    font-size: 42px;
-    margin-bottom: 15px;
-}
-
-.hero p {
-    font-size: 17px;
-    margin-bottom: 25px;
-}
-
-.button {
-    display: inline-block;
-    background: #000;
-    color: #fff;
-    padding: 14px 25px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.button:hover {
-    opacity: .85;
-}
-
-/* SHOP */
-
-.products {
-    max-width: 1100px;
-    margin: auto;
-    padding: 60px 20px;
-}
-
-.products h2 {
-    text-align: center;
-    color: #f7a8c4;
-    font-size: 32px;
-    margin-bottom: 35px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-}
-
-.card {
-    background: #111;
-    border: 1px solid #292929;
-    border-radius: 18px;
-    overflow: hidden;
-    transition: .3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    border-color: #f7a8c4;
-}
-
-.product-img {
-    width: 100%;
-    height: 360px;
-    background: #f7a8c4;
-    overflow: hidden;
-}
-
-.product-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.card-body {
-    padding: 22px;
-}
-
-.card h3 {
-    font-size: 21px;
-    margin-bottom: 8px;
-}
-
-.card p {
-    color: #bbb;
-    line-height: 1.5;
-    font-size: 14px;
-    margin-bottom: 15px;
-}
-
-.price {
-    color: #f7a8c4;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.shop-button {
-    display: inline-block;
-    background: #f7a8c4;
-    color: #000;
-    padding: 11px 18px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* NEW COLLECTION */
-
-.new-collection {
-    max-width: 1100px;
-    margin: auto;
-    padding: 10px 20px 70px;
-}
-
-.new-heading {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.new-label {
-    color: #f7a8c4;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    margin-bottom: 10px;
-}
-
-.new-heading h2 {
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-.new-heading p {
-    color: #aaa;
-    font-size: 15px;
-}
-
-.new-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-}
-
-.new-card {
-    background: #111;
-    border: 1px solid #292929;
-    border-radius: 18px;
-    overflow: hidden;
-    transition: .3s ease;
-}
-
-.new-card:hover {
-    transform: translateY(-5px);
-    border-color: #f7a8c4;
-}
-
-.new-img {
-    width: 100%;
-    height: 360px;
-    overflow: hidden;
-    background: #f7a8c4;
-}
-
-.new-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.new-body {
-    padding: 22px;
-}
-
-.new-body h3 {
-    font-size: 21px;
-    margin-bottom: 8px;
-}
-
-.new-body p {
-    color: #bbb;
-    line-height: 1.5;
-    font-size: 14px;
-    margin-bottom: 15px;
-}
-
-.coming-soon {
-    display: inline-block;
-    color: #f7a8c4;
-    font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-/* ABOUT */
-
-.about {
-    background: #f7a8c4;
-    color: #000;
-    text-align: center;
-    padding: 60px 25px;
-}
-
-.about h2 {
-    font-size: 32px;
-    margin-bottom: 18px;
-}
-
-.about p {
-    max-width: 650px;
-    margin: auto;
-    line-height: 1.7;
-}
-
-/* FOOTER */
-
-footer {
-    text-align: center;
-    padding: 35px 20px;
-    color: #aaa;
-    font-size: 13px;
-}
-
-/* MOBILE */
-
-@media (max-width: 600px) {
     .logo {
-        font-size: 31px;
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: 2px;
     }
 
-    .hero {
-        padding: 60px 20px;
-    }
-
-    .hero h1 {
-        font-size: 34px;
-    }
-
-    .products,
-    .new-collection {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    .products h2,
-    .new-heading h2 {
-        font-size: 28px;
-    }
-
-    .product-img,
-    .new-img {
-        height: 400px;
+    nav {
+      display: flex;
+      gap: 22px;
     }
 
     nav a {
-        margin: 0 7px;
+      text-decoration: none;
+      color: #111;
+      font-size: 14px;
+      font-weight: bold;
     }
-}
-</style></head><body><header>
-    <div class="logo">WLOVE LOUNGE ♡</div><div class="tagline">
-    COMFORT LOOKS GOOD ON YOU.
-</div>
 
-<nav>
-    <a href="#shop">SHOP</a>
-    <a href="#new">NEW COLLECTION</a>
-    <a href="#about">ABOUT</a>
-</nav>
+    /* HERO */
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+      background: #f7f7f7;
+    }
 
-</header><section class="hero">
-    <h1>COMFORT LOOKS GOOD ON YOU.</h1><p>
-    Soft looks. Cozy energy. WLOVE LOUNGE.
-</p>
+    .hero-content {
+      max-width: 700px;
+    }
 
-<a href="#shop" class="button">
-    SHOP THE COLLECTION
-</a>
+    .hero h1 {
+      font-size: clamp(48px, 10vw, 100px);
+      font-weight: 900;
+      letter-spacing: 4px;
+      margin-bottom: 15px;
+    }
 
-</section><!-- YOUR ORIGINAL PRODUCTS --><section class="products" id="shop"><h2>SHOP WLOVE</h2>
+    .hero p {
+      font-size: 17px;
+      color: #555;
+      margin-bottom: 30px;
+    }
 
-<div class="grid">
+    .shop-btn {
+      display: inline-block;
+      background: #111;
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 3px;
+    }
 
-    <article class="card">
-        <div class="product-img">
-            <img
-                src="Screenshot_20260917_233615_Gallery.jpg"
-                alt="WLOVE Lounge Set"
-            >
-        </div>
+    /* SECTION */
+    section {
+      padding: 75px 6%;
+    }
 
-        <div class="card-body">
-            <h3>Wlove Lounge Set</h3>
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
 
-            <p>
-                Our signature black two-piece hoodie and sweatpants set.
-            </p>
+    .section-title h2 {
+      font-size: 38px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
 
-            <div class="price">$50.00</div>
+    .section-title p {
+      margin-top: 10px;
+      color: #777;
+    }
 
-            <a href="#" class="shop-button">
-                SHOP NOW
-            </a>
-        </div>
-    </article>
+    /* PRODUCTS */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .product-card {
+      background: #f7f7f7;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-image {
+      width: 100%;
+      height: 430px;
+      overflow: hidden;
+      background: #eee;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-info h3 {
+      font-size: 19px;
+      margin-bottom: 8px;
+    }
+
+    .product-info p {
+      color: #777;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .price {
+      font-weight: 900;
+      font-size: 18px;
+    }
+
+    /* NEW COLLECTION */
+    .new-section {
+      background: #111;
+      color: white;
+    }
+
+    .new-section .section-title p {
+      color: #aaa;
+    }
+
+    .new-products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      max-width: 1250px;
+      margin: auto;
+    }
+
+    .new-card {
+      background: #1c1c1c;
+      overflow: hidden;
+    }
+
+    .new-image {
+      width: 100%;
+      height: 420px;
+      overflow: hidden;
+    }
+
+    .new-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .new-info {
+      padding: 20px;
+    }
+
+    .new-info h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .new-info p {
+      color: #aaa;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .coming-soon {
+      display: inline-block;
+      border: 1px solid white;
+      padding: 8px 12px;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    /* ABOUT */
+    .about {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      color: #666;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: #f7f7f7;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      color: #666;
+      margin-bottom: 25px;
+    }
+
+    .social-btn {
+      display: inline-block;
+      margin: 5px;
+      padding: 13px 22px;
+      background: #111;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer p {
+      color: #aaa;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .new-products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 16px 5%;
+      }
+
+      .logo {
+        font-size: 20px;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: 75vh;
+      }
+
+      section {
+        padding: 55px 5%;
+      }
+
+      .products,
+      .new-products {
+        grid-template-columns: 1fr;
+      }
+
+      .product-image,
+      .new-image {
+        height: 450px;
+      }
+
+      .section-title h2,
+      .about h2,
+      .contact h2 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">WLOVE LOUNGE</div>
+
+    <nav>
+      <a href="#shop">SHOP</a>
+      <a href="#new">NEW</a>
+      <a href="#about">ABOUT</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
 
 
-    <article class="card">
-        <div class="product-img">
-            <img
-                src="Screenshot_20260917_233608_Gallery.jpg"
-                alt="WLOVE Signature Tee"
-            >
-        </div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>WLOVE</h1>
+      <p>
+        Welcome to WLOVE LOUNGE — where comfort meets style.
+      </p>
 
-        <div class="card-body">
-            <h3>Wlove Essential Tee</h3>
-
-            <p>
-                A simple WLOVE essential made for everyday looks.
-            </p>
-
-            <div class="price">$28.00</div>
-
-            <a href="#" class="shop-button">
-                SHOP NOW
-            </a>
-        </div>
-    </article>
+      <a href="#shop" class="shop-btn">SHOP COLLECTION</a>
+    </div>
+  </section>
 
 
-    <article class="card">
-        <div class="product-img">
-            <img
-                src="Screenshot_20260917_233612_Gallery.jpg"
-                alt="WLOVE Hoodie"
-            >
-        </div>
+  <!-- MAIN COLLECTION -->
+  <section id="shop">
 
-        <div class="card-body">
-            <h3>Wlove Hoodie</h3>
-
-            <p>
-                Cozy black WLOVE zip hoodie for everyday comfort.
-            </p>
-
-            <div class="price">$40.00</div>
-
-            <a href="#" class="shop-button">
-                SHOP NOW
-            </a>
-        </div>
-    </article>
-
-</div>
-
-</section><!-- NEW PRODUCTS --><section class="new-collection" id="new"><div class="new-heading">
-
-    <div class="new-label">
-        NEW DROP
+    <div class="section-title">
+      <h2>WLOVE COLLECTION</h2>
+      <p>Shop the WLOVE LOUNGE essentials.</p>
     </div>
 
-    <h2>NEW COLLECTION</h2>
+    <div class="products">
+
+      <!-- PRODUCT 1 -->
+      <article class="product-card">
+        <div class="product-image">
+          <img
+            src="Screenshot_20260917_233615_Gallery.jpg"
+            alt="Wlove Lounge Set"
+          >
+        </div>
+
+        <div class="product-info">
+          <h3>Wlove Lounge Set</h3>
+          <p>Signature WLOVE LOUNGE set.</p>
+          <div class="price">$50.00</div>
+        </div>
+      </article>
+
+
+      <!-- PRODUCT 2 -->
+      <article class="product-card">
+        <div class="product-image">
+          <img
+            src="Screenshot_20260917_233608_Gallery.jpg"
+            alt="Wlove Essential Tee"
+          >
+        </div>
+
+        <div class="product-info">
+          <h3>Wlove Essential Tee</h3>
+          <p>Everyday WLOVE essential.</p>
+          <div class="price">$28.00</div>
+        </div>
+      </article>
+
+
+      <!-- PRODUCT 3 -->
+      <article class="product-card">
+        <div class="product-image">
+          <img
+            src="Screenshot_20260917_233612_Gallery.jpg"
+            alt="Wlove Hoodie"
+          >
+        </div>
+
+        <div class="product-info">
+          <h3>Wlove Hoodie</h3>
+          <p>Signature WLOVE hoodie.</p>
+          <div class="price">$40.00</div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- NEW COLLECTION -->
+  <section id="new" class="new-section">
+
+    <div class="section-title">
+      <h2>NEW COLLECTION</h2>
+      <p>New WLOVE pieces are coming soon.</p>
+    </div>
+
+    <div class="new-products">
+
+      <!-- NEW ITEM 1 -->
+      <article class="new-card">
+        <div class="new-image">
+          <img
+            src="Screenshot_20260918_031846_Gallery.jpg"
+            alt="Wlove New Collection"
+          >
+        </div>
+
+        <div class="new-info">
+          <h3>Wlove New Set</h3>
+          <p>A new WLOVE LOUNGE piece coming soon.</p>
+          <div class="coming-soon">COMING SOON</div>
+        </div>
+      </article>
+
+
+      <!-- NEW ITEM 2 -->
+      <article class="new-card">
+        <div class="new-image">
+          <img
+            src="Screenshot_20260918_031851_Gallery.jpg"
+            alt="Wlove New Collection"
+          >
+        </div>
+
+        <div class="new-info">
+          <h3>Wlove New Collection</h3>
+          <p>A new WLOVE LOUNGE piece coming soon.</p>
+          <div class="coming-soon">COMING SOON</div>
+        </div>
+      </article>
+
+
+      <!-- NEW ITEM 3 -->
+      <article class="new-card">
+        <div class="new-image">
+          <img
+            src="Screenshot_20260918_031856_Gallery.jpg"
+            alt="Wlove New Collection"
+          >
+        </div>
+
+        <div class="new-info">
+          <h3>Wlove New Collection</h3>
+          <p>A new WLOVE LOUNGE piece coming soon.</p>
+          <div class="coming-soon">COMING SOON</div>
+        </div>
+      </article>
+
+
+      <!-- NEW ITEM 4 -->
+      <article class="new-card">
+        <div class="new-image">
+          <img
+            src="Screenshot_20260918_040003_Gallery.jpg"
+            alt="Wlove New Set"
+          >
+        </div>
+
+        <div class="new-info">
+          <h3>Wlove New Set</h3>
+          <p>A new WLOVE LOUNGE piece coming soon.</p>
+          <div class="coming-soon">COMING SOON</div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- ABOUT -->
+  <section id="about">
+
+    <div class="about">
+      <h2>ABOUT WLOVE</h2>
+
+      <p>
+        WLOVE LOUNGE is a fashion brand created for people who want
+        comfort, confidence, and style all in one. Our collections
+        are made to bring a fresh look to everyday fashion.
+      </p>
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+
+    <h2>STAY CONNECTED</h2>
 
     <p>
-        New WLOVE pieces coming soon.
+      Follow WLOVE LOUNGE and stay updated on new drops.
     </p>
 
-</div>
+    <a
+      class="social-btn"
+      href="https://instagram.com/"
+      target="_blank"
+    >
+      INSTAGRAM
+    </a>
+
+    <a
+      class="social-btn"
+      href="https://facebook.com/"
+      target="_blank"
+    >
+      FACEBOOK
+    </a>
+
+  </section>
 
 
-<div class="new-grid">
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 WLOVE LOUNGE. All Rights Reserved.</p>
+  </footer>
 
-
-    <!-- NEW ITEM 1 -->
-
-    <article class="new-card">
-
-        <div class="new-img">
-            <img
-                Screenshot_20260918_040003_Gallery.jpg
-                alt="WLOVE New Collection"
-            >
-        </div>
-
-        <div class="new-body">
-
-            <h3>Wlove New Collection</h3>
-
-            <p>
-                A new WLOVE LOUNGE piece coming soon.
-            </p>
-
-            <div class="coming-soon">
-                COMING SOON
-            </div>
-
-        </div>
-
-    </article>
-
-
-    <!-- NEW ITEM 2 -->
-
-    <article class="new-card">
-
-        <div class="new-img">
-            <img
-                src="Screenshot_20260918_031851_Gallery.jpg"
-                alt="WLOVE New Collection"
-            >
-        </div>
-
-        <div class="new-body">
-
-            <h3>Wlove New Collection</h3>
-
-            <p>
-                A new WLOVE LOUNGE piece coming soon.
-            </p>
-
-            <div class="coming-soon">
-                COMING SOON
-            </div>
-
-        </div>
-
-    </article>
-
-
-    <!-- NEW ITEM 3 -->
-
-    <article class="new-card">
-
-        <div class="new-img">
-            <img
-                src="Screenshot_20260918_031856_Gallery.jpg"
-                alt="WLOVE New Collection"
-            >
-        </div>
-
-        <div class="new-body">
-
-            <h3>Wlove New Collection</h3>
-
-            <p>
-                A new WLOVE LOUNGE piece coming soon.
-            </p>
-
-            <div class="coming-soon">
-                COMING SOON
-            </div>
-
-        </div>
-
-    </article>
-
-</div>
-
-</section><!-- ABOUT --><section class="about" id="about"><h2>ABOUT WLOVE ♡</h2>
-
-<p>
-    WLOVE LOUNGE is made for comfort, confidence and effortless style.
-    From cozy lounge sets to everyday essentials, we believe comfort
-    should always look good.
-</p>
-
-</section><!-- FOOTER --><footer>© 2026 WLOVE LOUNGE ♡
-
-<br><br>
-
-COMFORT LOOKS GOOD ON YOU.
-
-</footer></body>
+</body>
 </html>
+
+  
