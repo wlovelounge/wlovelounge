@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>WLOVE LOUNGE | Coming Soon 2027</title>
+  <title>WLOVE LOUNGE</title>
 
   <style>
     * {
@@ -23,21 +23,16 @@
       color: #111;
     }
 
-    /* =========================
-       HEADER
-    ========================= */
-
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255,255,255,0.97);
+      background: rgba(255,255,255,0.96);
       border-bottom: 1px solid #eee;
       padding: 18px 6%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      backdrop-filter: blur(10px);
     }
 
     .logo {
@@ -49,6 +44,7 @@
     nav {
       display: flex;
       gap: 22px;
+      flex-wrap: wrap;
     }
 
     nav a {
@@ -56,64 +52,40 @@
       color: #111;
       font-size: 14px;
       font-weight: bold;
-      transition: 0.3s;
     }
-
-    nav a:hover {
-      color: #e98ab8;
-    }
-
-    /* =========================
-       HERO
-    ========================= */
 
     .hero {
-      min-height: 88vh;
+      min-height: 85vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 70px 20px;
-      background:
-        radial-gradient(circle at top, #ffd9ea 0%, #fceaf2 28%, #fff 65%);
+      padding: 60px 20px;
+      background: linear-gradient(#fff, #ffe4ef);
     }
 
     .hero-content {
-      max-width: 850px;
-    }
-
-    .hero-small {
-      font-size: 13px;
-      font-weight: bold;
-      letter-spacing: 5px;
-      color: #d56d9f;
-      margin-bottom: 20px;
+      max-width: 700px;
     }
 
     .hero h1 {
-      font-size: clamp(55px, 12vw, 125px);
+      font-size: clamp(48px, 10vw, 100px);
       font-weight: 900;
-      letter-spacing: 5px;
+      letter-spacing: 4px;
       margin-bottom: 15px;
-      line-height: 0.95;
-    }
-
-    .hero h1 span {
-      color: #e98ab8;
     }
 
     .hero p {
-      font-size: 18px;
+      font-size: 17px;
       color: #555;
-      line-height: 1.7;
-      margin: 0 auto 30px;
-      max-width: 600px;
+      margin-bottom: 25px;
     }
 
     .hero-coming {
       display: inline-block;
-      border: 2px solid #111;
-      padding: 12px 20px;
+      background: #111;
+      color: #fff;
+      padding: 12px 18px;
       font-size: 12px;
       font-weight: 900;
       letter-spacing: 2px;
@@ -124,24 +96,14 @@
       display: inline-block;
       background: #111;
       color: white;
-      padding: 16px 32px;
+      padding: 15px 30px;
       text-decoration: none;
       font-weight: bold;
       border-radius: 3px;
-      transition: 0.3s;
     }
-
-    .shop-btn:hover {
-      background: #e98ab8;
-      transform: translateY(-2px);
-    }
-
-    /* =========================
-       GENERAL SECTIONS
-    ========================= */
 
     section {
-      padding: 80px 6%;
+      padding: 75px 6%;
     }
 
     .section-title {
@@ -150,7 +112,7 @@
     }
 
     .section-title h2 {
-      font-size: clamp(30px, 5vw, 45px);
+      font-size: 38px;
       font-weight: 900;
       letter-spacing: 1px;
     }
@@ -158,117 +120,87 @@
     .section-title p {
       margin-top: 10px;
       color: #777;
-      line-height: 1.6;
-    }
-
-    .pink-line {
-      width: 55px;
-      height: 4px;
-      background: #e98ab8;
-      margin: 15px auto 0;
-    }
-
-    /* =========================
-       FIRST 3 FITS
-    ========================= */
-
-    #shop {
-      background: #fff;
     }
 
     .collection-label {
-      text-align: center;
+      color: #e98ab8;
       font-size: 12px;
       font-weight: 900;
-      letter-spacing: 4px;
-      color: #e98ab8;
-      margin-bottom: 12px;
+      letter-spacing: 3px;
+      margin-bottom: 10px;
     }
 
     .products {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 25px;
-      max-width: 1250px;
+      max-width: 1200px;
       margin: auto;
     }
 
     .product-card {
-      background: #f8f8f8;
+      background: #f7f7f7;
       overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease;
       border: 1px solid #eee;
     }
 
     .product-card:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.10);
+      transform: translateY(-5px);
     }
 
     .product-image {
       width: 100%;
-      height: 500px;
+      height: 430px;
       overflow: hidden;
-      background: #000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background: #eee;
     }
 
-    .product-image img {
+    .product-image img,
+    .new-image img,
+    .pink-image img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
       display: block;
-      transition: transform 0.5s ease;
-    }
-
-    .product-card:hover .product-image img {
-      transform: scale(1.02);
     }
 
     .product-info {
-      padding: 24px;
-      background: #fff;
+      padding: 20px;
     }
 
     .fit-number {
+      color: #e98ab8;
       font-size: 11px;
       font-weight: 900;
-      letter-spacing: 3px;
-      color: #e98ab8;
+      letter-spacing: 2px;
       margin-bottom: 8px;
     }
 
     .product-info h3 {
-      font-size: 21px;
-      margin-bottom: 9px;
+      font-size: 19px;
+      margin-bottom: 8px;
     }
 
     .product-info p {
       color: #777;
       font-size: 14px;
-      line-height: 1.6;
-      margin-bottom: 17px;
+      margin-bottom: 15px;
     }
 
     .coming-soon {
       display: inline-block;
       background: #111;
       color: white;
-      padding: 10px 14px;
+      padding: 9px 13px;
       font-size: 11px;
-      font-weight: 900;
-      letter-spacing: 1.5px;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
 
     .year {
-      color: #e98ab8;
+      color: #ff9ac5;
     }
-
-    /* =========================
-       NEW COLLECTION
-    ========================= */
 
     .new-section {
       background: #111;
@@ -277,10 +209,6 @@
 
     .new-section .section-title p {
       color: #aaa;
-    }
-
-    .new-section .pink-line {
-      background: #e98ab8;
     }
 
     .new-products {
@@ -292,29 +220,14 @@
     }
 
     .new-card {
-      background: #1b1b1b;
+      background: #1c1c1c;
       overflow: hidden;
-      border: 1px solid #292929;
-      transition: 0.3s;
-    }
-
-    .new-card:hover {
-      transform: translateY(-5px);
-      border-color: #e98ab8;
     }
 
     .new-image {
       width: 100%;
       height: 420px;
       overflow: hidden;
-      background: #050505;
-    }
-
-    .new-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
     }
 
     .new-info {
@@ -329,23 +242,61 @@
     .new-info p {
       color: #aaa;
       font-size: 14px;
-      line-height: 1.5;
       margin-bottom: 15px;
     }
 
-    .new-coming {
-      display: inline-block;
-      border: 1px solid #e98ab8;
-      color: #e98ab8;
-      padding: 8px 12px;
-      font-size: 10px;
-      font-weight: bold;
-      letter-spacing: 1.5px;
+    .new-section .coming-soon {
+      border: 1px solid white;
     }
 
-    /* =========================
-       ABOUT
-    ========================= */
+    .pink-section {
+      background: #ffe4ef;
+      color: #111;
+    }
+
+    .pink-section .section-title p {
+      color: #777;
+    }
+
+    .pink-products {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .pink-card {
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .pink-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .pink-image {
+      width: 100%;
+      height: 420px;
+      overflow: hidden;
+      background: #f7d7e4;
+    }
+
+    .pink-info {
+      padding: 18px;
+    }
+
+    .pink-info h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .pink-info p {
+      color: #777;
+      font-size: 13px;
+    }
 
     .about {
       max-width: 850px;
@@ -360,24 +311,12 @@
 
     .about p {
       color: #666;
-      line-height: 1.9;
+      line-height: 1.8;
       font-size: 16px;
     }
 
-    .about-highlight {
-      margin-top: 30px;
-      font-size: 13px;
-      font-weight: 900;
-      letter-spacing: 3px;
-      color: #e98ab8;
-    }
-
-    /* =========================
-       CONTACT
-    ========================= */
-
     .contact {
-      background: #fdf1f7;
+      background: #f7f7f7;
       text-align: center;
     }
 
@@ -399,33 +338,13 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
-      transition: 0.3s;
     }
-
-    .social-btn:hover {
-      background: #e98ab8;
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
 
     footer {
       background: #111;
       color: white;
       text-align: center;
-      padding: 35px 20px;
-    }
-
-    footer .footer-logo {
-      font-size: 20px;
-      font-weight: 900;
-      letter-spacing: 3px;
-      margin-bottom: 10px;
-    }
-
-    footer .heart {
-      color: #e98ab8;
+      padding: 30px 20px;
     }
 
     footer p {
@@ -433,12 +352,13 @@
       font-size: 13px;
     }
 
-    /* =========================
-       MOBILE
-    ========================= */
+    @media (max-width: 1100px) {
+      .pink-products {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
 
     @media (max-width: 900px) {
-
       .products {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -447,57 +367,45 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .product-image {
-        height: 480px;
+      .pink-products {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
     @media (max-width: 600px) {
-
       header {
-        padding: 15px 5%;
+        padding: 16px 5%;
       }
 
       .logo {
-        font-size: 18px;
-        letter-spacing: 1px;
+        font-size: 20px;
       }
 
       nav {
-        gap: 10px;
+        gap: 12px;
       }
 
       nav a {
-        font-size: 10px;
+        font-size: 12px;
       }
 
       .hero {
-        min-height: 78vh;
-        padding: 60px 18px;
-      }
-
-      .hero h1 {
-        font-size: 58px;
-      }
-
-      .hero p {
-        font-size: 15px;
+        min-height: 75vh;
       }
 
       section {
-        padding: 60px 5%;
+        padding: 55px 5%;
       }
 
       .products,
-      .new-products {
+      .new-products,
+      .pink-products {
         grid-template-columns: 1fr;
       }
 
-      .product-image {
-        height: 470px;
-      }
-
-      .new-image {
+      .product-image,
+      .new-image,
+      .pink-image {
         height: 450px;
       }
 
@@ -512,9 +420,7 @@
 
 <body>
 
-  <!-- =========================
-       HEADER
-  ========================= -->
+  <!-- HEADER -->
 
   <header>
     <div class="logo">WLOVE LOUNGE</div>
@@ -522,31 +428,26 @@
     <nav>
       <a href="#shop">SHOP</a>
       <a href="#new">NEW</a>
+      <a href="#pink-love">PINK LOVE</a>
       <a href="#about">ABOUT</a>
       <a href="#contact">CONTACT</a>
     </nav>
   </header>
 
 
-  <!-- =========================
-       HERO
-  ========================= -->
+  <!-- HERO -->
 
   <section class="hero">
-
     <div class="hero-content">
 
-      <div class="hero-small">
-        WELCOME TO WLOVE LOUNGE
+      <div class="collection-label">
+        WELCOME TO
       </div>
 
-      <h1>
-        W<span>LOVE</span>
-      </h1>
+      <h1>WLOVE</h1>
 
       <p>
-        Comfort meets style.
-        Your new favorite lounge and everyday pieces are on the way.
+        Welcome to WLOVE LOUNGE — where comfort meets style.
       </p>
 
       <div class="hero-coming">
@@ -556,34 +457,27 @@
       <br>
 
       <a href="#shop" class="shop-btn">
-        VIEW THE COLLECTION
+        VIEW COLLECTION
       </a>
 
     </div>
-
   </section>
 
 
-  <!-- =========================
-       THE 3 MAIN FITS
-  ========================= -->
+  <!-- FIRST 3 FITS -->
 
   <section id="shop">
 
     <div class="section-title">
 
       <div class="collection-label">
-        WLOVE LOUNGE
+        FIRST DROP
       </div>
 
-      <h2>
-        THE FIRST 3 FITS
-      </h2>
-
-      <div class="pink-line"></div>
+      <h2>WLOVE COLLECTION</h2>
 
       <p>
-        Three signature WLOVE pieces made for the first collection.
+        Our first three signature WLOVE fits are coming soon.
       </p>
 
     </div>
@@ -591,15 +485,14 @@
 
     <div class="products">
 
-
-      <!-- FIT 01 -->
+      <!-- FIT 1 -->
 
       <article class="product-card">
 
         <div class="product-image">
           <img
             src="Screenshot_20260917_233615_Gallery.jpg"
-            alt="WLOVE black hoodie and jogger set"
+            alt="Wlove Lounge Set"
           >
         </div>
 
@@ -609,12 +502,10 @@
             FIT 01
           </div>
 
-          <h3>
-            WLOVE LOUNGE SET
-          </h3>
+          <h3>Wlove Lounge Set</h3>
 
           <p>
-            The signature WLOVE black hoodie and jogger set.
+            Signature WLOVE LOUNGE set.
           </p>
 
           <div class="coming-soon">
@@ -626,14 +517,14 @@
       </article>
 
 
-      <!-- FIT 02 -->
+      <!-- FIT 2 -->
 
       <article class="product-card">
 
         <div class="product-image">
           <img
             src="Screenshot_20260917_233608_Gallery.jpg"
-            alt="WLOVE black lounge t-shirt"
+            alt="Wlove Essential Tee"
           >
         </div>
 
@@ -643,12 +534,10 @@
             FIT 02
           </div>
 
-          <h3>
-            WLOVE ESSENTIAL TEE
-          </h3>
+          <h3>Wlove Essential Tee</h3>
 
           <p>
-            A clean everyday WLOVE tee with the signature pink logo.
+            Everyday WLOVE essential.
           </p>
 
           <div class="coming-soon">
@@ -660,14 +549,14 @@
       </article>
 
 
-      <!-- FIT 03 -->
+      <!-- FIT 3 -->
 
       <article class="product-card">
 
         <div class="product-image">
           <img
             src="Screenshot_20260917_233612_Gallery.jpg"
-            alt="WLOVE black zip hoodie"
+            alt="Wlove Hoodie"
           >
         </div>
 
@@ -677,12 +566,10 @@
             FIT 03
           </div>
 
-          <h3>
-            WLOVE ZIP HOODIE
-          </h3>
+          <h3>Wlove Hoodie</h3>
 
           <p>
-            The signature WLOVE zip-up hoodie with pink branding.
+            Signature WLOVE hoodie.
           </p>
 
           <div class="coming-soon">
@@ -693,32 +580,25 @@
 
       </article>
 
-
     </div>
 
   </section>
 
 
-  <!-- =========================
-       NEW COLLECTION
-  ========================= -->
+  <!-- ORIGINAL 4 NEW COLLECTION FITS -->
 
   <section id="new" class="new-section">
 
     <div class="section-title">
 
       <div class="collection-label">
-        STAY TUNED
+        WLOVE LOUNGE
       </div>
 
-      <h2>
-        NEW COLLECTION
-      </h2>
-
-      <div class="pink-line"></div>
+      <h2>NEW COLLECTION</h2>
 
       <p>
-        More WLOVE LOUNGE pieces are coming soon.
+        New WLOVE pieces are coming soon.
       </p>
 
     </div>
@@ -726,184 +606,258 @@
 
     <div class="new-products">
 
-
-      <!-- NEW ITEM 1 -->
-
       <article class="new-card">
 
         <div class="new-image">
           <img
             src="Screenshot_20260918_031846_Gallery.jpg"
-            alt="WLOVE new collection"
+            alt="Wlove New Collection"
           >
         </div>
 
         <div class="new-info">
 
-          <h3>
-            WLOVE NEW SET
-          </h3>
+          <h3>Wlove New Set</h3>
 
           <p>
             A new WLOVE LOUNGE piece coming soon.
           </p>
 
-          <div class="new-coming">
-            COMING SOON • 2027
+          <div class="coming-soon">
+            COMING SOON
           </div>
 
         </div>
 
       </article>
 
-
-      <!-- NEW ITEM 2 -->
 
       <article class="new-card">
 
         <div class="new-image">
           <img
             src="Screenshot_20260918_031851_Gallery.jpg"
-            alt="WLOVE new collection"
+            alt="Wlove New Collection"
           >
         </div>
 
         <div class="new-info">
 
-          <h3>
-            WLOVE NEW COLLECTION
-          </h3>
+          <h3>Wlove New Collection</h3>
 
           <p>
             A new WLOVE LOUNGE piece coming soon.
           </p>
 
-          <div class="new-coming">
-            COMING SOON • 2027
+          <div class="coming-soon">
+            COMING SOON
           </div>
 
         </div>
 
       </article>
 
-
-      <!-- NEW ITEM 3 -->
 
       <article class="new-card">
 
         <div class="new-image">
           <img
             src="Screenshot_20260918_031856_Gallery.jpg"
-            alt="WLOVE new collection"
+            alt="Wlove New Collection"
           >
         </div>
 
         <div class="new-info">
 
-          <h3>
-            WLOVE NEW DROP
-          </h3>
+          <h3>Wlove New Collection</h3>
 
           <p>
             A new WLOVE LOUNGE piece coming soon.
           </p>
 
-          <div class="new-coming">
-            COMING SOON • 2027
+          <div class="coming-soon">
+            COMING SOON
           </div>
 
         </div>
 
       </article>
 
-
-      <!-- NEW ITEM 4 -->
 
       <article class="new-card">
 
         <div class="new-image">
           <img
             src="Screenshot_20260918_040003_Gallery.jpg"
-            alt="WLOVE new set"
+            alt="Wlove New Set"
           >
         </div>
 
         <div class="new-info">
 
-          <h3>
-            WLOVE NEW SET
-          </h3>
+          <h3>Wlove New Set</h3>
 
           <p>
             A new WLOVE LOUNGE piece coming soon.
           </p>
 
-          <div class="new-coming">
-            COMING SOON • 2027
+          <div class="coming-soon">
+            COMING SOON
           </div>
 
         </div>
 
       </article>
 
+    </div>
+
+  </section>
+
+
+  <!-- ORIGINAL 5 PINK LOVE FITS -->
+
+  <section id="pink-love" class="pink-section">
+
+    <div class="section-title">
+
+      <div class="collection-label">
+        WLOVE LOUNGE
+      </div>
+
+      <h2>THE PINK LOVE COLLECTION ♡</h2>
+
+      <p>
+        Made with love. Made to stand out.
+      </p>
+
+    </div>
+
+
+    <div class="pink-products">
+
+      <article class="pink-card">
+
+        <div class="pink-image">
+          <img
+            src="Screenshot_20260918_134105_Gallery.jpg"
+            alt="Love in Camo Set"
+          >
+        </div>
+
+        <div class="pink-info">
+          <h3>Love in Camo Set</h3>
+          <p>THE PINK LOVE COLLECTION ♡</p>
+        </div>
+
+      </article>
+
+
+      <article class="pink-card">
+
+        <div class="pink-image">
+          <img
+            src="Screenshot_20260918_134123_Gallery.jpg"
+            alt="Love Motion Set"
+          >
+        </div>
+
+        <div class="pink-info">
+          <h3>Love Motion Set</h3>
+          <p>THE PINK LOVE COLLECTION ♡</p>
+        </div>
+
+      </article>
+
+
+      <article class="pink-card">
+
+        <div class="pink-image">
+          <img
+            src="Screenshot_20260918_134127_Gallery.jpg"
+            alt="Pretty in Pink Set"
+          >
+        </div>
+
+        <div class="pink-info">
+          <h3>Pretty in Pink Set</h3>
+          <p>THE PINK LOVE COLLECTION ♡</p>
+        </div>
+
+      </article>
+
+
+      <article class="pink-card">
+
+        <div class="pink-image">
+          <img
+            src="Screenshot_20260918_134131_Gallery.jpg"
+            alt="Starstruck Set"
+          >
+        </div>
+
+        <div class="pink-info">
+          <h3>Starstruck Set</h3>
+          <p>THE PINK LOVE COLLECTION ♡</p>
+        </div>
+
+      </article>
+
+
+      <article class="pink-card">
+
+        <div class="pink-image">
+          <img
+            src="Screenshot_20260918_134134_Gallery.jpg"
+            alt="Pink Stardust Set"
+          >
+        </div>
+
+        <div class="pink-info">
+          <h3>Pink Stardust Set</h3>
+          <p>THE PINK LOVE COLLECTION ♡</p>
+        </div>
+
+      </article>
 
     </div>
 
   </section>
 
 
-  <!-- =========================
-       ABOUT
-  ========================= -->
+  <!-- ABOUT -->
 
   <section id="about">
 
     <div class="about">
 
-      <div class="collection-label">
-        OUR STORY
-      </div>
-
-      <h2>
-        ABOUT WLOVE
-      </h2>
-
-      <div class="pink-line"></div>
+      <h2>ABOUT WLOVE</h2>
 
       <p>
-        WLOVE LOUNGE is a fashion brand created for people
-        who want comfort, confidence, and style all in one.
-        Our collections are made to bring a fresh look to
-        everyday fashion.
+        WLOVE LOUNGE is a fashion brand created for people who want
+        comfort, confidence, and style all in one. Our collections
+        are made to bring a fresh look to everyday fashion.
       </p>
-
-      <div class="about-highlight">
-        COMFORT • CONFIDENCE • STYLE
-      </div>
 
     </div>
 
   </section>
 
 
-  <!-- =========================
-       CONTACT
-  ========================= -->
+  <!-- CONTACT -->
 
   <section id="contact" class="contact">
 
-    <h2>
-      STAY CONNECTED
-    </h2>
+    <h2>STAY CONNECTED</h2>
 
     <p>
-      Follow WLOVE LOUNGE and stay updated on the 2027 drop.
+      Follow WLOVE LOUNGE and stay updated on new drops.
     </p>
 
     <a
       class="social-btn"
       href="https://instagram.com/"
       target="_blank"
+      rel="noopener noreferrer"
     >
       INSTAGRAM
     </a>
@@ -912,6 +866,7 @@
       class="social-btn"
       href="https://facebook.com/"
       target="_blank"
+      rel="noopener noreferrer"
     >
       FACEBOOK
     </a>
@@ -919,25 +874,17 @@
   </section>
 
 
-  <!-- =========================
-       FOOTER
-  ========================= -->
+  <!-- FOOTER -->
 
   <footer>
-
-    <div class="footer-logo">
-      WLOVE <span class="heart">♥</span> LOUNGE
-    </div>
-
-    <p>
-      © 2027 WLOVE LOUNGE. All Rights Reserved.
-    </p>
-
+    <p>© 2027 WLOVE LOUNGE. All Rights Reserved.</p>
   </footer>
-
 
 </body>
 </html>
+   
+  
+
 
  
 
